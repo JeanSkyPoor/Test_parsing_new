@@ -119,7 +119,7 @@ class KFCParser():
             outfile.write(json_object)
 
 
-    def solve_first_link(self):
+    def solve_kfc_parser(self):
         
         for item in self.request:
             self.get_raw_data(item)
