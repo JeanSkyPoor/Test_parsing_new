@@ -3,7 +3,7 @@ import json
 from secondary_defs import *
 
 
-class MainClass():
+class KFCParser():
     def __init__(self) -> None:
         self.link = 'https://api.kfc.com/api/store/v2/store.get_restaurants?showClosed=true'
         self.request = None
@@ -117,5 +117,15 @@ class MainClass():
 
         with open("sample_first_link.json", "w") as outfile:
             outfile.write(json_object)
+
+
+    def solve_first_link(self):
+        
+        for item in self.request:
+            self.get_raw_data(item)
+            self.transform_phone_data()
+            self.transform_working_hours()
+            self.add_info_in_final_results()
+            self.create_json_file()
 
 
