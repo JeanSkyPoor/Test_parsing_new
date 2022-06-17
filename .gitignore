@@ -3,3 +3,5 @@ example.py
 env
 sample_first_link.json
 First_link/__pycache__
+Second_link/__pycache__
+sample_zikoparser.json
