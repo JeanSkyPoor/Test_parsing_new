@@ -6,7 +6,6 @@ from secondary_defs import *
 class KFCParser():
     def __init__(self) -> None:
         self.link = 'https://api.kfc.com/api/store/v2/store.get_restaurants?showClosed=true'
-        self.request = None
         self.final_results = []
 
 
