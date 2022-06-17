@@ -1,5 +1,5 @@
 from secondary_defs import *
-from main_class import KFCParser
+from KFCParser import KFCParser
 
 my_class = KFCParser()
 my_class.create_request()
