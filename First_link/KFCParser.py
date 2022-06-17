@@ -9,7 +9,8 @@ class KFCParser():
         self.request = None
         self.final_results = []
 
-    def create_request(self):
+
+    def create_request(self) -> None:
         self.request = requests.get(self.link).json().get('searchResults')
 
 
@@ -46,7 +47,7 @@ class KFCParser():
         self.get_raw_status_from_request(item)
 
 
-    def transform_phone_data(self):
+    def transform_phone_data(self) -> None:
         """
         self.phone type list, for example ['+79218975664'] or ['+74952120000', ['5004', '5003']]
         """
@@ -119,7 +120,7 @@ class KFCParser():
             outfile.write(json_object)
 
 
-    def solve_kfc_parser(self):
+    def solve_kfc_parser(self) -> None:
         
         for item in self.request:
             self.get_raw_data(item)
