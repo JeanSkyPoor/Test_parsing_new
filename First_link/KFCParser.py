@@ -115,7 +115,7 @@ class KFCParser():
     def create_json_file(self) -> None:
         json_object = json.dumps(self.final_results, indent=4, ensure_ascii=False)
 
-        with open("sample_first_link.json", "w") as outfile:
+        with open("sample_kfc_parser.json", "w") as outfile:
             outfile.write(json_object)
 
 
@@ -126,6 +126,6 @@ class KFCParser():
             self.transform_phone_data()
             self.transform_working_hours()
             self.add_info_in_final_results()
-            self.create_json_file()
+        self.create_json_file()
 
 
